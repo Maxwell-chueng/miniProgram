@@ -1,0 +1,36 @@
+<!--pages/goodList/goodList.wxml-->
+<view class="goodList">
+    <searchInput></searchInput>
+    <tab tab="{{tab}}" bindhandleTab="handleTab">
+            <view>        
+
+                    <view class="goodItems"
+                    wx:for="{{goodListData}}" wx:key="goods_id">
+                    
+                        <navigator class="" target="" url="/pages/goodDetail/goodDetail?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+
+                            <view class="goodImage">
+                                
+                                        <image  src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+
+                            </view>
+                            
+                            <view class="goodInfos">
+                            
+                                    <view class="title">
+                                        {{item.goods_name}}
+                                    </view>
+                                                    
+                                    <view class="price">
+                                        ￥{{item.goods_price}}元
+                                    </view>
+                                    
+
+                            </view>
+                            
+                        </navigator>
+                    </view>
+            </view>
+    </tab>
+</view>
+  

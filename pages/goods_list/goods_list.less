@@ -1,0 +1,46 @@
+.goodList{
+    tab{
+        view{
+            .goodItems{
+                width: 100vw;
+                navigator{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
+                    .goodImage{
+                        flex: 2;
+                        padding: 10rpx 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        align-items: center;
+                            image{
+                                width: 100%;
+                            }    
+                    }
+                    .goodInfos{
+                        flex: 3;
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 10rpx 15rpx;
+                        .title{
+                            display: -webkit-box;
+                            overflow: hidden;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                        }
+                        .price{
+                            padding-top: 10rpx;
+                            font-size: 32rpx;
+                            color: var(--themeColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

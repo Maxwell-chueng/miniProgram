@@ -1,0 +1,7 @@
+<view class="nav">
+    <navigator wx:for="{{navList}}" wx:key="name" class="navList"  url="/pages/category/category" hover-class="navigator-hover" open-type="switchTab" >
+        <image class="navImage" src="{{item.image_src}}" mode="widthFix" lazy-load="true" binderror="" bindload="" />    
+    </navigator>
+      
+</view>
+  

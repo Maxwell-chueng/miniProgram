@@ -1,0 +1,54 @@
+.floor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+.floor .floorTitle {
+  width: 100%;
+  height: 100%;
+  margin-top: 20rpx;
+}
+.floor .floorTitle image {
+  width: 100%;
+  height: 60rpx;
+}
+.floor .content {
+  width: 100%;
+  height: 100%;
+}
+.floor .content navigator {
+  overflow: hidden;
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+.floor .content navigator:nth-child(1) {
+  width: 33.33%;
+  height: 55.45422414vw;
+}
+.floor .content navigator:nth-last-child(-n+4) {
+  width: 33.33%;
+  height: 27.72711207vw;
+}
+.floor .content navigator image {
+  width: 100%;
+  height: 100%;
+}
+.floor .content navigator:nth-child(1) {
+  padding-left: 10rpx;
+}
+.floor .content navigator:nth-child(2),
+.floor .content navigator:nth-child(3) {
+  padding-bottom: 10rpx;
+}
+.floor .content navigator:nth-child(3),
+.floor .content navigator:nth-child(5) {
+  padding-right: 10rpx;
+}
+.floor .content navigator:nth-child(2),
+.floor .content navigator:nth-child(4) {
+  padding-right: 10rpx;
+  padding-left: 10rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "historyTab":"../../components/historyTab/historyTab"
+  },
+  "navigationBarTitleText": "我的收藏"
+}

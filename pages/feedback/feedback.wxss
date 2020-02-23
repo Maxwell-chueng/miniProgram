@@ -1,0 +1,111 @@
+.feedback {
+  width: 100vw;
+}
+.feedback .noOrder {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.feedback .myOrder {
+  width: 96%;
+  margin: 0rpx auto;
+}
+.feedback .myOrder .orderItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2rpx solid #ccc;
+  padding-bottom: 20rpx ;
+  margin-top: 30rpx;
+}
+.feedback .myOrder .orderItem .time {
+  width: 100%;
+  text-align: left;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+}
+.feedback .myOrder .orderItem .goods {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.feedback .myOrder .orderItem .goods navigator {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  width: 100vw;
+  height: 100%;
+}
+.feedback .myOrder .orderItem .goods navigator view {
+  flex: 3;
+  height: 200rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.feedback .myOrder .orderItem .goods navigator view image {
+  width: 100%;
+  height: 100%;
+}
+.feedback .myOrder .orderItem .goods navigator .goodsInfo {
+  flex: 7;
+  height: 200rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10rpx;
+}
+.feedback .myOrder .orderItem .goods navigator .goodsInfo .title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 5rpx;
+}
+.feedback .myOrder .orderItem .goods navigator .goodsInfo .goodsDetail {
+  width: 100%;
+  padding-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.feedback .myOrder .orderItem .goods navigator .goodsInfo .goodsDetail .num {
+  text-align: right;
+  flex: 3;
+  color: var(--themeColor);
+}
+.feedback .myOrder .orderItem .goods navigator .goodsInfo .goodsDetail .price {
+  text-align: right;
+  flex: 1;
+  color: var(--themeColor);
+}
+.feedback .myOrder .orderItem .info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.feedback .myOrder .orderItem .info .address {
+  flex: 1;
+  width: 100%;
+  text-align: right;
+}
+.feedback .myOrder .orderItem .info .user {
+  flex: 1;
+  width: 100%;
+  text-align: right;
+}
+.feedback .myOrder .orderItem:nth-child(1) {
+  margin-top: 0;
+}

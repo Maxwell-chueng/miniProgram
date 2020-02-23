@@ -1,0 +1,31 @@
+<view>
+    <historyTab tabs="{{tab}}" bindswitchTab="changeTab"></historyTab>
+    <view class="content" wx:if="{{hasCollectionList}}">
+         <view class="goodItem" wx:for="{{collectionList}}">
+              <navigator class="img" target="" url="/pages/goodDetail/goodDetail?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+                    <view class="img">
+                      
+                        <image class="" src="{{item.pics[0].pics_mid}}" mode="aspectFill" lazy-load="false" binderror="" bindload="" />                      
+                    
+                    </view>
+              
+               <view class="goodDetail">
+                  <view class="title">
+                      {{item.goods_name}}
+                  </view>
+                  <view class="price">
+                      {{item.goods_price}}元
+                  </view>
+               </view> 
+               </navigator>         
+         </view>
+    </view>
+        <view wx:else class="noData">
+             <image class="" src="http://img.58cdn.com.cn/dist/jxedt/pc/products/jxregister/images/no_data.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+             <text class="" selectable="false" space="false" decode="false">
+                 暂无数据
+             </text>
+                          
+        </view>     
+</view>
+  

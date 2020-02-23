@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "searchInput":"../../components/search/search",
+    "carousel":"../../components/carousel/carousel",
+    "nav":"../../components/nav/nav",
+    "floor":"../../components/floor/floor"
+  },
+  "navigationBarTitleText": "黑米商城",
+  "navigationBarBackgroundColor": "#ffb6c1"
+}

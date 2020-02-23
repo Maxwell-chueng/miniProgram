@@ -1,0 +1,11 @@
+<view class="orderTab">
+    <view class="tab">
+        <view class="tabChild {{item.isActive? 'active':''}}" bindtap="switchTab" data-index="{{index}}" wx:for="{{tabs}}" wx:key="id">
+            {{item.name}}
+        </view>  
+    </view>
+    <view class="content">
+        <slot></slot>
+    </view>
+</view>
+  

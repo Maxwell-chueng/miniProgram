@@ -1,0 +1,46 @@
+<view class="feedback">
+    <orderTab tabs="{{tab}}" bindhandleTab="handleTabBar"></orderTab>
+    <view class="myOrder" wx:if="{{hasOrderList}}">
+        <view class="orderItem" wx:for="{{orderData}}" wx:key="*this">
+            <view class="time">
+                  下单时间:{{item[0].time}}
+            </view>
+            <view class="goods" wx:for="{{item}}" wx:key="goods_id" wx:for-item="goods">
+              <navigator  class="" target="" url="/pages/goodDetail/goodDetail?goods_id={{goods.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+                   
+                <view>
+                    <image class="" src="{{goods.pics[0].pics_mid}}"  lazy-load="false" binderror="" bindload="" mode="aspectFit" />
+                    
+                </view>
+                <view class="goodsInfo">
+                    <view class="title">
+                        {{goods.goods_name}}
+                    </view>
+                    <view class="goodsDetail">
+                        <view class="num">
+                            {{goods.count}}件     
+                        </view>
+                        <view class="price">
+                            {{goods.goods_price}}元
+                        </view> 
+                    </view>
+                      
+                </view>
+               </navigator>   
+            </view>
+            <view class="info">
+                <view class="address">{{item[0].address.province}} {{item[0].address.city}} {{item[0].address.zone}} {{item[0].address.detail}}</view>
+                <view class="user">
+                    {{item[0].address.name}} {{item[0].address.phone}}
+                </view>
+                
+            </view>    
+        </view>
+    </view>
+    <view class="noOrder" wx:else>
+        <image class="noOrder"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582228398188&di=03a8f202605631f1e19d238368cfdfcc&imgtype=0&src=http%3A%2F%2Fspic1.51fanli.net%2Fgroup2%2FM08%2F0C%2F7A%2FwKgDilvYh0yAY2zJAACO1A1_a84506_350x350.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          
+    </view>
+      
+</view>
+  

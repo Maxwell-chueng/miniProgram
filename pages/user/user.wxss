@@ -1,0 +1,163 @@
+.user {
+  width: 100%;
+}
+.user .avatar {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--themeColor);
+}
+.user .avatar .bgp {
+  width: 100%;
+  height: 45vh;
+}
+.user .avatar .btn {
+  border: 2rpx solid #fff;
+  display: block;
+  width: 30%;
+  height: 10vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 100;
+}
+.user .avatar .bigAvatar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  filter: blur(10rpx);
+}
+.user .avatar .smAvatar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.user .avatar .smAvatar image {
+  position: absolute;
+  top: 10vh;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user .avatar .smAvatar .nickName {
+  position: absolute;
+  bottom: 10vh;
+  font-size: 28rpx;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user .content {
+  position: relative;
+  height: 65vh;
+  background-color: #ecebea;
+}
+.user .content .operation {
+  width: 90%;
+  position: absolute;
+  z-index: 300;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ecebea;
+  top: -5vh;
+}
+.user .content .operation .collection {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 12rpx 0;
+}
+.user .content .operation .collection navigator {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+}
+.user .content .operation .collection navigator view:nth-child(1) {
+  color: var(--themeColor);
+  font-size: 28rpx;
+}
+.user .content .operation .order {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.user .content .operation .order .title {
+  font-size: 24rpx;
+  padding: 16rpx 30rpx;
+  border-bottom: 2rpx solid silver;
+}
+.user .content .operation .order .myOrder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.user .content .operation .order .myOrder navigator {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+}
+.user .content .operation .order .myOrder navigator .icon-dingdan {
+  font-weight: normal !important;
+}
+.user .content .operation .order .myOrder navigator view:nth-child(1) {
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.user .content .operation .address {
+  font-size: 24rpx;
+  background-color: #fff;
+  text-indent: 30rpx;
+  padding: 16rpx 0;
+  margin-top: 20rpx;
+}
+.user .content .operation .contact {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.user .content .operation .contact navigator {
+  text-indent: 30rpx;
+  padding: 16rpx 0 ;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid silver;
+}
+.user .content .operation .contact button {
+  width: 100%;
+  background-color: #fff;
+  text-align: left;
+  font-weight: normal;
+  color: #666;
+  text-indent: 30rpx;
+  padding: 16rpx 0 ;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid silver;
+}
+.user .content .operation .contact navigator:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.user .content .operation .contact navigator:nth-child(1) view:nth-child(2) {
+  margin-right: 30rpx;
+}

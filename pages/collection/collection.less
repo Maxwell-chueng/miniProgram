@@ -1,0 +1,52 @@
+.content{
+    width: 100vw;
+    .goodItem{
+        navigator{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 2rpx solid silver;
+            &:first-child{
+                margin-top: 20rpx;
+            }
+            view{
+                flex: 3;
+                image{
+                    padding: 0 10rpx;
+                    width: 100%;
+                    height: 180rpx;
+                }
+            }
+            .goodDetail{
+                flex: 7;
+                padding: 0 10rpx;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                .title{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+                .price{
+                    margin-top: 20rpx;
+                    text-align: right;
+                    width: 100%;
+                    padding-right: 40rpx;
+                    color: var(--themeColor);
+                }
+            }
+        }
+    }
+}
+.noData{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex; 
+}

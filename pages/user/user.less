@@ -1,0 +1,166 @@
+.user{
+    width: 100%;
+    .avatar{
+        width: 100%;
+        height: 45vh;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--themeColor);
+        .bgp{
+            width: 100%;
+            height: 45vh;
+        }
+        .btn{
+            border: 2rpx solid #fff;
+            display: block;
+            width: 30%;
+            height: 10vh;
+            color: #fff ;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            z-index: 100;
+        }
+        .bigAvatar{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 45vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            filter: blur(10rpx); 
+        }
+        .smAvatar{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            image{
+                position: absolute;
+                top: 10vh;
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                // margin-top: -10vh;
+            }
+            .nickName{
+                position: absolute;
+                bottom: 10vh;
+                font-size: 28rpx;
+                color: #fff;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+    }
+    .content{
+        position: relative;
+        height: 65vh;
+        background-color: rgb(236, 235, 234);
+        .operation{
+            width: 90%;
+            position: absolute;
+            z-index: 300;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color:rgb(236, 235, 234);
+            top: -5vh;
+            .collection{
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                padding: 12rpx 0;
+
+                navigator{
+                    flex: 1;
+                    text-align: center;
+                    font-size: 24rpx;
+                    view:nth-child(1){
+                        color: var(--themeColor);
+                        font-size: 28rpx;
+                    }
+                }
+            }
+            .order{
+                background-color: #fff;
+                margin-top: 20rpx;
+                .title{
+                    font-size: 24rpx;
+                    padding: 16rpx 30rpx;
+                    border-bottom: 2rpx solid silver;
+                }
+                .myOrder{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10rpx 0;
+                    navigator{
+                        flex: 1;
+                        text-align: center;
+                        font-size: 24rpx;
+                        .icon-dingdan{
+                            font-weight: normal !important;
+                        }
+                        view:nth-child(1){
+                            font-size: 40rpx;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+            .address{
+                font-size: 24rpx;
+                background-color: #fff;
+                text-indent: 30rpx;
+                padding: 16rpx 0;
+                margin-top: 20rpx;
+            }
+            .contact{
+                margin-top: 20rpx;
+                background-color: #fff;
+                navigator{
+                    text-indent: 30rpx;
+                    padding: 16rpx 0 ;
+                    font-size: 24rpx;
+                    border-bottom: 2rpx solid silver;
+                }
+                button{
+                    width: 100%;
+                    background-color: #fff;
+                    text-align: left;
+                    font-weight: normal;
+                    color: #666;
+                    text-indent: 30rpx;
+                    padding: 16rpx 0 ;
+                    font-size: 24rpx;
+                    border-bottom: 2rpx solid silver;
+                }
+                navigator:nth-child(1){
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    align-items: center;
+                    view:nth-child(2){
+                        margin-right: 30rpx;
+                    }
+                }
+            }
+        }
+    }
+}

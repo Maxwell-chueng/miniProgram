@@ -1,0 +1,51 @@
+<view class="category">
+    <searchInput></searchInput>
+    <view class="container">
+        <scroll-view class="categoryName"
+        scroll-y 
+        >
+           
+            <view wx:for="{{categoryName}}" wx:key="*this"
+            class="{{currentIndex === index? 'active':''}}"
+            bindtap="switchItems"
+            data-index="{{index}}"
+            >
+                {{item}}
+            </view>
+              
+        </scroll-view>
+
+        <scroll-view class="categoryItems" 
+        scroll-top="{{scrollTop}}"
+        scroll-y
+        >
+        <block         
+        wx:for="{{categoryList}}"
+        wx:key="cat_id"
+        >     
+            <text class="title" wx:if="{{item.children}}">
+                {{item.cat_name}}
+            </text>
+              
+        <view class="listContent">
+            <navigator
+            wx:for="{{item.children}}"
+            wx:key="cat_id"
+            wx:for-index="i"
+            wx:for-item="list"
+             class="items" target="" url="/pages/goods_list/goods_list?cid={{list.cat_id}}" hover-class="navigator-hover" open-type="navigate">
+
+                <image  class="" src="{{list.cat_icon}}" mode="widthFix" lazy-load="true" />
+                <view class="name" >
+                    {{list.cat_name}}
+                </view>
+                  
+            </navigator>
+        </view>
+          
+
+        </block>   
+        </scroll-view>  
+    </view>
+</view>
+  

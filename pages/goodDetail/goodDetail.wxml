@@ -1,0 +1,72 @@
+<view class="goodDetail">
+    <view class="carousel">
+        <swiper 
+        indicator-dots 
+        indicator-color="rgba(0,0,0,.3)" 
+        indicator-active-color="#ffb6c1" 
+        autoplay 
+        circular 
+          >
+                
+                <swiper-item  wx:for="{{goodDetailData.pics}}" wx:key="pics_id"   bindtap="handlePreviewImage" 
+                data-current="{{item.pics_mid}}" data-type="hasImage">
+
+                        <image  src='{{item.pics_mid}}' mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+                          
+                                                
+                                
+                </swiper-item>
+
+        </swiper>
+
+    </view>
+    <view class="price" >
+        ￥{{goodDetailData.goods_price}}元
+    </view>
+    <view class="goodInfo">
+        <view class="title">{{goodDetailData.goods_name}}</view>
+        <view class="collection">
+            <view bindtap="collection" class="icon icon-shoucang1 iconfont {{isCollect?'isCollection':''}}"></view>
+            <view class="font">收藏</view>
+        </view>
+    </view>
+    <view class="goodDetail">
+         
+        <view class="title">
+            图文详情
+        </view> 
+
+        <view class="content">
+            <rich-text nodes="{{goodDetailData.goods_introduce}}">
+                
+            </rich-text>
+              
+        </view>
+             
+    </view>
+    <view class="toolBar">
+        <view class="kefu son">
+            <view class="iconfont icon-kefu icon"></view>
+            <view class="title">联系客服</view>
+            <button open-type="contact"></button>
+        </view>
+        <view class="share son">
+            <view class="iconfont icon-fenxiang-copy icon"></view>
+            <view class="title">分享</view>
+            <button open-type="share"></button>
+        </view>
+        <navigator url="/pages/cart/cart" open-type="switchTab" hover-class="none" class="cart son">
+            <view class="iconfont icon-gouwuche icon"></view>
+            <view class="title">购物车</view>
+        </navigator>
+        <view class="joinCart son"  bindtap="addCart">
+            <view class="title">加入购物车</view>
+        </view>
+        <view class="purchase son">
+            <view class="title">立即购买</view>
+        </view>
+          
+    </view>
+       
+</view>
+  

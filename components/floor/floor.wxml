@@ -1,0 +1,14 @@
+   <view class="floor" wx:for="{{floorList}}" wx:key="this">
+    <view class="floorTitle">
+        <image class="" src="{{item.floor_title.image_src}}" lazy-load="true" />
+    </view>
+    <view class="content">
+     <block wx:for="{{item.product_list}}" wx:for-item="list" wx:key="name" wx:for-index="i">
+        <navigator  class="Icon" url='{{list.navigator_url}}' open-type="{{list.open_type}}">
+            <image mode="scaleToFill" class="" src="{{list.image_src}}"lazy-load="true"  />
+        </navigator>
+    </block>
+    </view>
+</view>
+  
+  

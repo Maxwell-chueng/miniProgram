@@ -1,0 +1,7 @@
+<view>
+    <searchInput></searchInput>
+    <carousel carouselList="{{carouselList}}"></carousel>
+    <nav navList="{{navList}}"></nav>
+    <floor floorList="{{floorList}}"></floor>     
+</view>
+  

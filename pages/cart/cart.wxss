@@ -1,0 +1,184 @@
+page {
+  width: 100vw;
+  padding-bottom: 80rpx;
+}
+page .cart {
+  width: 100vw;
+}
+page .cart .getAddress {
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 60rpx 0;
+}
+page .cart .getAddress .btn {
+  color: var(--themeColor);
+  border: 2rpx solid currentColor;
+  font-size: 32rpx;
+  white-space: nowrap;
+  width: 50%;
+}
+page .cart .getAddress .address {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+page .cart .getAddress .address .userName {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0  16rpx;
+}
+page .cart .getAddress .address .userAddress {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0  16rpx;
+}
+page .cart .myCart {
+  font-size: 40rpx;
+  border-top: 2rpx solid var(--themeColor);
+  border-bottom: 2rpx solid var(--themeColor);
+  text-indent: 20rpx;
+  padding: 20rpx 0;
+}
+page .cart .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+page .cart .content .goods {
+  padding: 10rpx 10rpx;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid var(--themeColor);
+}
+page .cart .content .goods checkbox {
+  flex: 1;
+}
+page .cart .content .goods navigator {
+  flex: 3;
+}
+page .cart .content .goods navigator image {
+  width: 100%;
+}
+page .cart .content .goods .goodsInfo {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 40rpx;
+}
+page .cart .content .goods .goodsInfo .title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+page .cart .content .goods .goodsInfo .goodDetail {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+page .cart .content .goods .goodsInfo .goodDetail .price {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--themeColor);
+}
+page .cart .content .goods .goodsInfo .goodDetail .count {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+page .cart .content .goods .goodsInfo .goodDetail .count .desc,
+page .cart .content .goods .goodsInfo .goodDetail .count .num,
+page .cart .content .goods .goodsInfo .goodDetail .count .plus {
+  height: 60rpx;
+  width: 50rpx;
+  border: 2rpx solid var(--themeColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .cart .content .goods .goodsInfo .goodDetail .count .num {
+  border: 0;
+  font-size: 32rpx;
+  padding: 0 30rpx;
+}
+page .cart .noImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+page .cart .noImage image {
+  width: 80vw;
+}
+page .cart .total {
+  width: 100vw;
+  background-color: #fff;
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+page .cart .total .totalInfo {
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+page .cart .total .totalInfo .info {
+  padding-right: 10rpx;
+  flex: 5;
+}
+page .cart .total .totalInfo .info .title {
+  font-size: 36rpx;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
+}
+page .cart .total .totalInfo .info .title .title {
+  font-size: 36rpx;
+  text-align: right;
+  color: var(--themeColor);
+  font-weight: bold;
+}
+page .cart .total .totalInfo .info .title .heji {
+  font-size: 36rpx;
+  text-align: right;
+}
+page .cart .total .totalInfo .info .Totalmoney .infos {
+  text-align: right;
+  font-size: 24rpx;
+}
+page .cart .total .totalInfo .pay {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  font-size: 32rpx;
+  color: #fff;
+  height: 90rpx;
+}

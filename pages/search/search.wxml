@@ -1,0 +1,15 @@
+<view class="searchPage">
+    <view class="topBar">
+       <input placeholder="请输入您要搜索的商品" bindinput="handleInput" value="{{val}}">         
+       </input>
+       <button hidden="{{!isShow}}" class="btn" bindtap="handleBtn">
+           取消
+       </button>
+    </view>
+    <view class="searchContent">
+        <navigator  class="items" wx:for="{{list}}" wx:key="goods_id" target="" url="/pages/goodDetail/goodDetail?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+            {{item.goods_name}}
+        </navigator>
+    </view>   
+</view>
+  

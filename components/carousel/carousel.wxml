@@ -1,0 +1,18 @@
+<view class="carousel">
+   <swiper 
+   indicator-dots 
+   indicator-color="rgba(0,0,0,.3)"
+   indicator-active-color="#ffb6c1"
+   autoplay
+   interval="3000"
+   circular
+   >
+      <swiper-item class="carouselList" wx:for="{{carouselList}}" wx:key="goods_id" wx:for-index="good_id">
+          <navigator   url="{{item.navigator_url}}" hover-class="navigator-hover" open-type="{{item.open_type}}">
+              <image mode="widthFix" src="{{item.image_src}}" lazy-load="true" />
+          </navigator>
+      </swiper-item>
+   </swiper>
+</view>
+
+  

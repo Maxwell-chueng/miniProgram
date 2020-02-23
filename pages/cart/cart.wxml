@@ -1,0 +1,72 @@
+<view class="cart">
+    <view class="getAddress">
+        <button plain class="btn" bindtap="getAddress" wx:if="{{!address.data.province}}">添加收货地址</button>
+        <view class="address" wx:else>
+            <view class="userName">
+                <view>收货人:{{address.data.name}}</view>
+                <view>{{address.data.phone}}</view>
+            </view>
+            <view class="userAddress">
+                {{address.data.province}}{{address.data.city}}{{address.data.zone}}{{address.data.detail}}
+            </view>
+              
+        </view>
+    </view>
+    <view class="myCart">
+        购物车
+    </view>
+    <view wx:if="{{cartInfo.length!==0}}" class="content">
+        <view class="goods" wx:for="{{cartInfo}}" wx:key="goods_id">
+            <checkbox-group bindchange="checkSomeOne" data-index="{{index}}">
+                <checkbox  checked="{{item.isChecked}}" color="#ffb6c1">
+                </checkbox>
+            </checkbox-group>
+              
+            <navigator class="" target="" url="/pages/goodDetail/goodDetail?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+                            <image class="" src="{{item.pics[0].pics_mid}}" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+            </navigator>
+            <view class="goodsInfo">
+                <view class="title">
+                    {{item.goods_name}}
+                </view>
+                <view class="goodDetail">
+                    <view class="price">￥{{item.goods_price}}</view>
+                    <view class="count">
+                        <view class="desc" bindtap="changeNum" data-index="{{index}}" data-type='desc'>-</view>
+                        <view class="num">{{item.count}}</view>
+                        <view class="plus" bindtap="changeNum" data-index="{{index}}" data-type="plus">+</view>
+                    </view>
+                </view>
+               
+            </view>
+        </view>
+    </view>
+    <view wx:else class="noImage">
+        <image  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1581954861100&di=5929cd6ad0adc50d02a4ddb1ce2568e1&imgtype=0&src=http%3A%2F%2Fwx1.sinaimg.cn%2Flarge%2F687c72e4gy1fl2b8o5xukj20c80960sw.jpg" mode="widthFix" lazy-load="false" binderror="" bindload="" />     
+    </view>
+      
+    <view class="total">
+        <checkbox-group bindchange="checkAll">
+            <checkbox color="#ffb6c1"  checked="{{isAllChecked}}" disabled="{{isDisable}}">全选</checkbox>    
+        </checkbox-group>
+        <view class="totalInfo">
+            <view class="info">
+                <view class="title">
+                   <view class="heji">合计：</view>
+                   <view class="title">￥{{totalMoney}}</view>
+                </view>  
+                <view class="Totalmoney">
+                    <view class="infos">
+                        包含运费                        
+                    </view>
+                </view>
+            </view>
+            <view class="pay" bindtap='goPay'>
+                结算({{i}})
+            </view>
+        </view>
+    </view>
+</view>
+  
+  
+  

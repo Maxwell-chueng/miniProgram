@@ -1,0 +1,18 @@
+.orderTab {
+  width: 100%;
+}
+.orderTab .tab {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.orderTab .tab .tabChild {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.active {
+  border-bottom: 2rpx solid var(--themeColor);
+  color: var(--themeColor) !important;
+}

@@ -1,0 +1,14 @@
+.nav {
+  width: 100%;
+  display: flex;
+}
+.nav .navList {
+  width: 100%;
+  flex: 1;
+  padding: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.nav .navList image {
+  width: 100%;
+}

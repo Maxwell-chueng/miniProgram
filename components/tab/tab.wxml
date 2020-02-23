@@ -1,0 +1,10 @@
+<view class="tab">
+    <view class="tabGroup {{item.isActive? 'active':''}}" wx:for="{{tab}}" wx:key="id" bindtap="switchTab" data-index='{{index}}' >
+        {{item.name}}
+    </view>
+</view>
+<view class="tabContainer">
+    <slot></slot>
+</view>
+  
+  

@@ -1,0 +1,101 @@
+<view class="user">
+    <view class="avatar">
+         <navigator class="btn" wx:if="{{!userInfo.avatarUrl}}" 
+         url="/pages/login/login"
+          hover-class="navigator-hover"    open-type="navigate">
+             登录
+         </navigator>
+         <image class="bgp" src="{{userInfo.avatarUrl}}" lazy-load="false" binderror="" bindload="" />
+           
+         <view >
+             <image class="bigAvatar" src="{{userInfo.avatarUrl}}"lazy-load="false" binderror="" bindload="" />
+             <view class="smAvatar">
+                          <image wx:if="{{isHasData}}" class="" src="{{userInfo.avatarUrl}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+
+                          <view class="nickName">
+                              {{userInfo.nickName}}
+                          </view> 
+             </view>    
+               
+         </view>
+           
+    </view>
+    <view class="content">
+         <view class="operation">
+               <view class="collection">
+
+               <navigator  url="/pages/collection/collection?type=0" hover-class="navigator-hover" open-type="navigate">
+                        <view>0</view>
+                         <view>
+                             收藏的店铺
+                         </view>
+               </navigator>
+                    <navigator url="/pages/collection/collection?type=1" hover-class="navigator-hover" open-type="navigate">
+                         <view>{{collectNum}}</view> 
+                         <view>
+                             收藏的商品
+                         </view>
+                    </navigator>
+                    <navigator url="/pages/collection/collection?type=2" hover-class="navigator-hover" open-type="navigate">
+                         <view>0</view>
+                         <view>
+                             关注的商品
+                         </view>
+                    </navigator>
+                    <navigator url="/pages/collection/collection?type=3" hover-class="navigator-hover" open-type="navigate">
+                         <view>{{historyNum}}</view>
+                         <view>
+                             我的足迹
+                         </view>
+                    </navigator>
+               </view>
+               <view class="order">
+                   <view class="title">
+                       我的订单
+                   </view> 
+                    <view class="myOrder">
+                        <navigator url="/pages/feedback/feedback?type=0" hover-class="navigator-hover" open-type="navigate">
+                            <view class="iconfont icon-dingdan"></view>
+                            <view>全部订单</view>
+                        </navigator>
+                        <navigator url="/pages/feedback/feedback?type=1" hover-class="navigator-hover" open-type="navigate">
+                            <view class="iconfont icon-nopayment"></view>
+                            <view>待付款</view>
+                        </navigator>
+                        <navigator url="/pages/feedback/feedback?type=2" hover-class="navigator-hover" open-type="navigate">
+                            <view class="iconfont icon-wuliu"></view>
+                            <view>待收货</view>
+                        </navigator>
+                        <navigator url="/pages/feedback/feedback?type=3" hover-class="navigator-hover" open-type="navigate">
+                            <view class="iconfont icon-tuihuotuikuan-"></view>
+                            <view>退款/退货</view>
+                        </navigator>
+                    </view>    
+               </view>
+               <view class="address">
+                        <navigator url="" hover-class="navigator-hover" open-type="navigate">
+                            收货地址管理
+                        </navigator>
+               </view>
+               <view class="contact">
+                    <navigator url="" hover-class="navigator-hover" open-type="navigate">
+                        <view>联系客服</view>
+                        <view>4008-123-123</view>
+                    </navigator>
+                    <button  open-type="feedback" >
+                        反馈意见
+                    </button>
+                      
+                    <navigator url="" hover-class="navigator-hover" open-type="navigate">
+                        关于我们
+                    </navigator>
+                    <navigator url="" hover-class="navigator-hover" open-type="navigate">
+                        把应用推荐给其他人
+                    </navigator>
+               </view>
+         </view>  
+    </view>
+</view>
+  
+  
+  

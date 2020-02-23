@@ -1,0 +1,52 @@
+page {
+  height: 100%;
+}
+page .category {
+  height: 100%;
+}
+page .category .container {
+  height: calc( 100vh - 90rpx );
+  display: flex;
+}
+page .category .container .categoryName {
+  flex: 2;
+}
+page .category .container .categoryName view {
+  color: #333;
+  text-align: center;
+  padding: 20rpx;
+}
+page .category .container .categoryItems {
+  flex: 6;
+}
+page .category .container .categoryItems .title {
+  text-align: center;
+  display: block;
+  font-size: 40rpx;
+  padding-bottom: 30rpx;
+}
+page .category .container .categoryItems .listContent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+page .category .container .categoryItems .listContent .items {
+  width: 33.33%;
+  padding: 30rpx;
+}
+page .category .container .categoryItems .listContent .items image {
+  width: 100%;
+}
+page .category .container .categoryItems .listContent .items .name {
+  width: 100%;
+  font-size: 30rpx;
+  display: block;
+  text-align: center;
+}
+.active {
+  color: var(--themeColor) !important;
+  border-left: 5rpx solid var(--themeColor);
+}

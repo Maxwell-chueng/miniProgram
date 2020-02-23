@@ -1,0 +1,7 @@
+<view class="historyTab">
+    <view class="name {{item.isActive?'isActive':''}}" wx:for="{{tabs}}" wx:key="id" data-index="{{index}}" bindtap="handleTab">{{item.name}}</view>
+    <view class="conetnt">
+       <slot></slot>
+    </view>
+</view>
+  

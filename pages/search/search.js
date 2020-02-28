@@ -26,7 +26,7 @@ Page({
     }
   },
   async getSearchData(val){
-    let res = await request('https://api.zbztb.cn/api/public/v1/goods/qsearch',"GET",{query:val});
+    let res = await request('https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch',"GET",{query:val}); 
     this.setData({
       list:res.data.message,
       isShow:true,

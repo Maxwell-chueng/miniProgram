@@ -66,7 +66,7 @@ Page({
        })
   },
        async getCategoryData(){
-            let  res = await request("https://api.zbztb.cn/api/public/v1/categories");
+            let  res = await request("https://api-hmugo-web.itheima.net/api/public/v1/categories");
             if(res.statusCode === 200){
              //  得到分类页面的总数据
               let {message} = res.data;

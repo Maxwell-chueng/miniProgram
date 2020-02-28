@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
         // 获取轮播图
-        until.request("https://api.zbztb.cn/api/public/v1/home/swiperdata").then((result)=>{
+        until.request("https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata").then((result)=>{
           if(result.statusCode === 200){
              let carouselList = result.data.message;
              carouselList.forEach((v,i)=>{
@@ -31,7 +31,7 @@ Page({
           console.log('轮播图获取数据失败');
         });
         // 获取导航
-        until.request("https://api.zbztb.cn/api/public/v1/home/catitems").then(
+        until.request("https://api-hmugo-web.itheima.net/api/public/v1/home/catitems").then(
           (res)=>{
             if(res.statusCode === 200){
               let navList = res.data.message;
@@ -45,7 +45,7 @@ Page({
             console.log('导航获取数据失败');
           });
           // 获取首页楼层
-          until.request("https://api.zbztb.cn/api/public/v1/home/floordata").then(
+          until.request("https://api-hmugo-web.itheima.net/api/public/v1/home/floordata").then(
             (res)=>{{
               if(res.statusCode === 200){
                 let floorList = res.data.message;

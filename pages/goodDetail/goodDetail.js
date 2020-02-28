@@ -76,7 +76,7 @@ Page({
   },
   // 发送请求获取产品细节页面数据
   async getGoodDetail(goods_id){
-    let goodDetailData = await request('https://api.zbztb.cn/api/public/v1/goods/detail','GET',{goods_id});
+    let goodDetailData = await request('https://api-hmugo-web.itheima.net/api/public/v1/goods/detail','GET',{goods_id});
     // 如果状态码为200，则请求成功
     if(goodDetailData.statusCode === 200){
       goodDetailData = goodDetailData.data.message;
